@@ -48,6 +48,7 @@ public class TaskController {
 	@ApiOperation(value = "查询任务队列")
 	@GetMapping("/queue")
 	public List<Task> queue() {
+
 		Set<String> queueTaskIds = this.taskQueueHelper.getQueueTaskIds();
 		return queueTaskIds.stream().map(this.taskStoreService::get).filter(Objects::nonNull)
 				.sorted(Comparator.comparing(Task::getSubmitTime))
