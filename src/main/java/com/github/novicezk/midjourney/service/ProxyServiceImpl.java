@@ -61,7 +61,7 @@ public class ProxyServiceImpl implements ProxyService{
         String url = "https://cdn.discordapp.com/" + reqPath;
 //        String url = "http://34.68.103.183:42146/api/cnd-discordapp/" + reqPath;
         log.info("url",url);
-
+        log.info(url);
         RestTemplate restTemplate = new RestTemplate();
 
         //有BUG，只能返回png格式的图片
@@ -75,7 +75,8 @@ public class ProxyServiceImpl implements ProxyService{
         byte[] imageBytes = response.getBody();
 
 //        byte[] imageBytes = restTemplate.getForObject(url, byte[].class);
-        log.info("response",response);
+        log.info("response");
+        log.info(String.valueOf(response));
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "image/png");
 
