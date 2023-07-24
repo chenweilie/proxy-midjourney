@@ -37,6 +37,7 @@ public class TaskController {
 		return this.taskStoreService.list().stream()
 				.sorted((t1, t2) -> CompareUtil.compare(t2.getSubmitTime(), t1.getSubmitTime()))
 				.toList();
+
 	}
 
 	@ApiOperation(value = "指定ID获取任务")
