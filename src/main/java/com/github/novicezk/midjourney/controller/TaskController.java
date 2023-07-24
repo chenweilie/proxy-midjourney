@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -73,7 +74,7 @@ public class TaskController {
 
 	@ApiOperation(value = "图片代理")
 	@GetMapping("/proxy")
-	public ResponseEntity<byte[]> proxy(@RequestParam(value = "reqPath") String reqPath) {
+	public ResponseEntity<byte[]> proxy(@RequestParam(value = "reqPath") String reqPath) throws URISyntaxException {
 		return proxyService.proxy(reqPath);
 	}
 
