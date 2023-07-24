@@ -49,7 +49,8 @@ public class ProxyServiceImpl implements ProxyService{
     @Override
     public ResponseEntity<byte[]> proxy(String reqPath) {
 
-        String url = "https://cdn.discordapp.com/" + reqPath;
+//        String url = "https://cdn.discordapp.com/" + reqPath;
+        String url = "http://34.68.103.183:42146/api/cnd-discordapp/" + reqPath;
         System.out.println(url);
 
         RestTemplate restTemplate = new RestTemplate();
