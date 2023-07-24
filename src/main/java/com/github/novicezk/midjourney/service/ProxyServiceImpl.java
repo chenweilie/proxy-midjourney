@@ -76,6 +76,7 @@ public class ProxyServiceImpl implements ProxyService{
 
 //        byte[] imageBytes = restTemplate.getForObject(url, byte[].class);
         log.info("response");
+
         log.info(String.valueOf(response));
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "image/png");
