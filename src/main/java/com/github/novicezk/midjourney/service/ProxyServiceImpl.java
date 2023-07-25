@@ -74,6 +74,7 @@ public class ProxyServiceImpl implements ProxyService{
         ResponseEntity<byte[]> response = restTemplate.exchange(request, byte[].class);
         byte[] imageBytes = response.getBody();
 
+
 //        byte[] imageBytes = restTemplate.getForObject(url, byte[].class);
         log.info("response");
         log.info(String.valueOf(response));
